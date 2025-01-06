@@ -1,7 +1,10 @@
 .header {
     display: flex;
     height: 66px;
-    padding: 0 40px;
+    padding: 0 40px 0px 40px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -18,4 +21,10 @@
 
 .logoText {
     font-size: var(--title);
+}
+
+.headerInfoSection {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
 }
