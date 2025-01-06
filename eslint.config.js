@@ -25,8 +25,11 @@ export default tseslint.config(
                 'warn',
                 { allowConstantExport: true },
             ],
-            indent: ["error", 4],
-            'simples-import-sort/imports': 'error'
+            indent: ["error", "tab"],
+            'simple-import-sort/imports': 'error'
         },
+        settings: {
+            "editor.tabSize": 4,
+        }
     },
 )
