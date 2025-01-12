@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import styles from "./Home.module.css";
 
 export default function Home() {
@@ -11,6 +13,16 @@ export default function Home() {
           Monte uma equipe para executar as atividades das disciplinas ou tirar
           uma ideia do papel
         </h3>
+
+        <div>
+          {/* TODO: the below 'to' field value 
+                        should depend on the user login state
+                        /login if not logged
+                        /projects if logged
+           */}
+          <Link to="/login">Compartilhe sua ideia</Link>
+          <Link to="#projects">Explorar projetos</Link>
+        </div>
       </div>
     </div>
   );
