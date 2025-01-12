@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  border-bottom: 1px solid rgba(12, 14, 19, 0.2);
 }
 
 .logo {
@@ -25,8 +26,10 @@
 
 .headerInfoSection {
   display: flex;
-  justify-content: space-between;
   width: 400px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--normal-text);
 }
 
 .link {
@@ -34,3 +37,13 @@
   color: var(--text);
 }
 
+.startButton {
+  width: 160px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--background);
+  background-color: var(--primary);
+  border-radius: 10px;
+  font-size: var(--small-text);
+  text-align: center;
+}
