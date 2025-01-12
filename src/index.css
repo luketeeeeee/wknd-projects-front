@@ -1,25 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
-    background-color: var(--background);
+  background-color: var(--background);
 
-    font-family: "Lato", serif;
+  font-family: "Lato", serif;
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    --large-title: 48px;
-    --title: 32px;
-    --large-text: 24px;
-    --normal-text: 18px;
-    --small-text: 16px;
+  --large-title: 48px;
+  --title: 32px;
+  --large-text: 24px;
+  --normal-text: 18px;
+  --small-text: 16px;
 }
-
-
 
 :root[data-theme="light"] {
   --text: #0c0e13;
@@ -36,14 +32,16 @@
   --accent: #1432a9;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
