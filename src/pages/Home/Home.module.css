@@ -1,0 +1,35 @@
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 110px;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--large-title);
+  color: var(--text);
+  font-weight: 900;
+}
+
+span:first-child {
+  color: var(--primary);
+}
+
+.subtitle {
+  width: 700px;
+  font-size: 28px;
+  color: rgba(12, 14, 19, 0.6);
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.mainNavMenu {
+  display: flex;
+  gap: 10px;
+  width: 500px;
+}
+
+.shareIdeasButton {
+  width: 200px;
+}
