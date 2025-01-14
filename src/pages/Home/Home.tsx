@@ -1,3 +1,4 @@
+import { ArrowRight, Code2, Rocket, Users } from "lucide-react";
 import { Link } from "react-router";
 
 import styles from "./Home.module.css";
@@ -22,9 +23,47 @@ export default function Home() {
            */}
           <Link to="/login" className={styles.shareIdeasButton}>
             Compartilhe sua ideia
+            <ArrowRight />
           </Link>
-          <Link to="#projects">Explorar projetos</Link>
+          <Link to="#projects" className={styles.exploreButton}>
+            Explorar projetos
+          </Link>
         </div>
+
+        <div className={styles.mainInfoSection}>
+          <h1>Como funciona</h1>
+
+          <div className={styles.infoCards}>
+            <div className={styles.card}>
+              <Rocket />
+              <h2>Compartilhe sua ideia</h2>
+              <p>
+                Publique suas ideias com uma pequena descrição e habilidades que
+                você julga necessárias
+              </p>
+            </div>
+
+            <div className={styles.card}>
+              <Users />
+              <h2>Monte sua equipe</h2>
+              <p>
+                Publique suas ideias com uma pequena descrição e habilidades que
+                você julga necessárias
+              </p>
+            </div>
+
+            <div className={styles.card}>
+              <Code2 />
+              <h2>Desenvolva</h2>
+              <p>
+                Ponha as suas ideias (ou atividades) em prática para
+                transformá-las em realidade
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div></div>
       </div>
     </div>
   );
