@@ -14,13 +14,15 @@ export default function Home() {
           uma ideia do papel
         </h3>
 
-        <div>
+        <div className={styles.mainNavMenu}>
           {/* TODO: the below 'to' field value 
                         should depend on the user login state
                         /login if not logged
                         /projects if logged
            */}
-          <Link to="/login">Compartilhe sua ideia</Link>
+          <Link to="/login" className={styles.shareIdeasButton}>
+            Compartilhe sua ideia
+          </Link>
           <Link to="#projects">Explorar projetos</Link>
         </div>
       </div>

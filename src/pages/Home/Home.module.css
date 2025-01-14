@@ -23,3 +23,13 @@ span:first-child {
   font-weight: 500;
   margin-top: 30px;
 }
+
+.mainNavMenu {
+  display: flex;
+  gap: 10px;
+  width: 500px;
+}
+
+.shareIdeasButton {
+  width: 200px;
+}
