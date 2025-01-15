@@ -118,6 +118,3 @@ span:first-child {
   font-weight: 800;
   font-size: calc(var(--title) + 6px);
 }
-
-.projectsCarousel {
-}

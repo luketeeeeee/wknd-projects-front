@@ -72,8 +72,12 @@ export default function Home() {
       </div>
 
       <div className={styles.projectCards}>
-        <h1>Veja alguns projetos</h1>
-        <div className={styles.projectsCarousel}></div>
+        <h1>Alguns projetos</h1>
+        <div className="">
+          {cardsArray.map((card) => (
+            <div>{card.projectName}</div>
+          ))}
+        </div>
       </div>
     </div>
   );
