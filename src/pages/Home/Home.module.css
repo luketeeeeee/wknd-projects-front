@@ -7,7 +7,7 @@
 }
 
 .title {
-  font-size: var(--large-title);
+  font-size: calc(var(--large-title) + 10px);
   color: var(--text);
   font-weight: 900;
 }
@@ -18,18 +18,106 @@ span:first-child {
 
 .subtitle {
   width: 700px;
-  font-size: 28px;
-  color: rgba(12, 14, 19, 0.6);
+  font-size: 22px;
+  color: rgba(12, 14, 19, 0.7);
   font-weight: 500;
   margin-top: 30px;
 }
 
 .mainNavMenu {
+  margin-top: 60px;
   display: flex;
-  gap: 10px;
-  width: 500px;
+  gap: 20px;
 }
 
 .shareIdeasButton {
-  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 270px;
+  height: 50px;
+  padding: 0 20px;
+  text-decoration: none;
+  font-size: calc(var(--large-text) - 4px);
+  font-weight: 500;
+  color: var(--background);
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+/* TODO: add to shareIdeasButton a hover animation */
+
+.exploreButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  color: var(--text);
+  border: 2px solid rgba(12, 14, 19, 0.6);
+  border-radius: 10px;
+  font-size: calc(var(--large-text) - 4px);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* TODO: add to exploreButton a hover animation */
+
+.mainInfoSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 170px;
+  text-align: center;
+}
+
+.mainInfoSection h1 {
+  font-weight: 800;
+  font-size: calc(var(--title) + 6px);
+}
+
+.infoCards {
+  display: flex;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  gap: 15px;
+}
+
+.card div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  color: var(--primary);
+  background-color: rgba(20, 66, 250, 0.2);
+}
+
+.card div :first-child {
+  width: 30px;
+  height: 30px;
+}
+
+.projectCards {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.projectCards h1 {
+  font-weight: 800;
+  font-size: calc(var(--title) + 6px);
+}
+
+.projectsCarousel {
 }
