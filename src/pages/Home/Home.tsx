@@ -35,7 +35,9 @@ export default function Home() {
 
           <div className={styles.infoCards}>
             <div className={styles.card}>
-              <Rocket />
+              <div>
+                <Rocket />
+              </div>
               <h2>Compartilhe sua ideia</h2>
               <p>
                 Publique suas ideias com uma pequena descrição e habilidades que
@@ -44,7 +46,9 @@ export default function Home() {
             </div>
 
             <div className={styles.card}>
-              <Users />
+              <div>
+                <Users />
+              </div>
               <h2>Monte sua equipe</h2>
               <p>
                 Publique suas ideias com uma pequena descrição e habilidades que
@@ -53,7 +57,9 @@ export default function Home() {
             </div>
 
             <div className={styles.card}>
-              <Code2 />
+              <div>
+                <Code2 />
+              </div>
               <h2>Desenvolva</h2>
               <p>
                 Ponha as suas ideias (ou atividades) em prática para
