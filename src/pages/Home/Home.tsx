@@ -1,5 +1,12 @@
 import useEmblaCarousel from "embla-carousel-react";
-import { ArrowRight, Code2, Rocket, Users } from "lucide-react";
+import {
+  ArrowRight,
+  Code2,
+  Rocket,
+  Users,
+  ChevronRight,
+  ChevronLeft,
+} from "lucide-react";
 import { Link } from "react-router";
 
 import { cardsArray } from "./cards";
@@ -87,7 +94,7 @@ export default function Home() {
 
         <div className={styles.carousel}>
           <button className={styles.emblaPrev} onClick={scrollPrev}>
-            anterior
+            <ChevronLeft />
           </button>
 
           <div className={styles.embla}>
@@ -101,7 +108,7 @@ export default function Home() {
           </div>
 
           <button className={styles.emblaNext} onClick={scrollNext}>
-            próximo
+            <ChevronRight />
           </button>
         </div>
       </div>
