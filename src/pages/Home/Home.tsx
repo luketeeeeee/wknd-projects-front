@@ -1,10 +1,21 @@
+import useEmblaCarousel from "embla-carousel-react";
 import { ArrowRight, Code2, Rocket, Users } from "lucide-react";
 import { Link } from "react-router";
 
 import { cardsArray } from "./cards";
 import styles from "./Home.module.css";
+import { useCallback } from "react";
 
 export default function Home() {
+  const [emblaRef, emblaApi] = useEmblaCarousel();
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
     <div>
       <div className={styles.mainSection}>
@@ -73,10 +84,25 @@ export default function Home() {
 
       <div className={styles.projectCards}>
         <h1>Alguns projetos</h1>
-        <div className="">
-          {cardsArray.map((card) => (
-            <div>{card.projectName}</div>
-          ))}
+
+        <div className={styles.carousel}>
+          <button className={styles.emblaPrev} onClick={scrollPrev}>
+            anterior
+          </button>
+
+          <div className={styles.embla}>
+            <div className={styles.emblaViewport} ref={emblaRef}>
+              <div className={styles.emblaContainer}>
+                {cardsArray.map((card) => (
+                  <div className={styles.emblaSlide}>{card.projectName}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <button className={styles.emblaNext} onClick={scrollNext}>
+            próximo
+          </button>
         </div>
       </div>
     </div>
