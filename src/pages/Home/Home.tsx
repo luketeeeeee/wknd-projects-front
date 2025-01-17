@@ -40,7 +40,7 @@ export default function Home() {
                         /login if not logged
                         /projects if logged
            */}
-          <Link to="/login" className={styles.shareIdeasButton}>
+          <Link to="/auth" className={styles.shareIdeasButton}>
             Compartilhe sua ideia
             <ArrowRight />
           </Link>
@@ -124,7 +124,7 @@ export default function Home() {
       <div className={styles.bottomSection}>
         <h1>Pronto para começar seu projeto?</h1>
         <p>Junte-se com outros alunos e ponha suas ideias em prática</p>
-        <Link to="/login" className={styles.bottomSectionButton}>
+        <Link to="/auth" className={styles.bottomSectionButton}>
           Criar sua conta agora
         </Link>
       </div>
