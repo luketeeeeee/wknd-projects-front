@@ -120,6 +120,14 @@ export default function Home() {
           </button>
         </div>
       </div>
+
+      <div className={styles.bottomSection}>
+        <h1>Pronto para começar seu projeto?</h1>
+        <p>Junte-se com outros alunos e ponha suas ideias em prática</p>
+        <Link to="/login" className={styles.bottomSectionButton}>
+          Criar sua conta agora
+        </Link>
+      </div>
     </div>
   );
 }
