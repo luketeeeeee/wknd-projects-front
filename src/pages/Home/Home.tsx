@@ -1,17 +1,17 @@
 import useEmblaCarousel from "embla-carousel-react";
 import {
   ArrowRight,
+  ChevronLeft,
+  ChevronRight,
   Code2,
   Rocket,
   Users,
-  ChevronRight,
-  ChevronLeft,
 } from "lucide-react";
+import { useCallback } from "react";
 import { Link } from "react-router";
 
 import { cardsArray } from "./cards";
 import styles from "./Home.module.css";
-import { useCallback } from "react";
 
 export default function Home() {
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -101,7 +101,15 @@ export default function Home() {
             <div className={styles.emblaViewport} ref={emblaRef}>
               <div className={styles.emblaContainer}>
                 {cardsArray.map((card) => (
-                  <div className={styles.emblaSlide}>{card.projectName}</div>
+                  <div className={styles.emblaSlide}>
+                    <h1>{card.projectName}</h1>
+                    <p className={styles.cardLookingFor}>
+                      Procurando: {card.projectLookingFor}
+                    </p>
+                    <p className={styles.cardDescription}>
+                      {card.projectDescription}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

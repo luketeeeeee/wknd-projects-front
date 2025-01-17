@@ -138,6 +138,7 @@ span:first-child {
 .emblaPrev:hover,
 .emblaNext:hover {
   cursor: pointer;
+  transition: 500ms;
 }
 
 .embla {
@@ -146,9 +147,23 @@ span:first-child {
 
 .emblaContainer {
   display: flex;
+  gap: 20px;
+  height: 250px;
 }
 
 .emblaSlide {
-  flex: 0 0 100%;
+  display: flex;
+  padding: 25px;
+  flex-direction: column;
+  flex: 0 0 400px;
   min-width: 0;
+  width: 200px;
+  border-radius: 15px;
+  border: 2px solid blue;
+}
+
+.emblaSlide h1 {
+  text-align: left;
+  font-size: var(--large-text);
+  font-weight: 600;
 }
