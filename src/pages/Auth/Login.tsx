@@ -1,6 +1,14 @@
+import { useState } from "react";
+
+import { LoginForm } from "./authForms.types";
 import styles from "./Login.module.css";
 
 export default function Login() {
+  const [loginForm, setLoginForm] = useState<LoginForm>({
+    email: "",
+    password: "",
+  });
+
   return (
     <div className={styles.loginContainer}>
       <div className={styles.field}>

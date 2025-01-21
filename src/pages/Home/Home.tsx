@@ -27,7 +27,8 @@ export default function Home() {
     <div>
       <div className={styles.mainSection}>
         <h1 className={styles.title}>
-          Encontre colegas para ajudar a <span>executar suas ideias</span>{" "}
+          Encontre colegas para ajudar a{" "}
+          <span className={styles.titleMainText}>executar suas ideias</span>{" "}
         </h1>
         <h3 className={styles.subtitle}>
           Monte uma equipe para executar as atividades das disciplinas ou tirar

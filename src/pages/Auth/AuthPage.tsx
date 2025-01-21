@@ -39,6 +39,10 @@ export default function AuthPage() {
         <div className={styles.formsContainer}>
           {authModeSelector === "login" ? <Login /> : <Register />}
 
+          <div className={styles.divider}>
+            <span>Ou continue com</span>
+          </div>
+
           <div>google auth</div>
         </div>
       </div>
