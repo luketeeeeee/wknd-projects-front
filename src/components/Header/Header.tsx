@@ -19,7 +19,7 @@ export default function Header() {
           <Link to="/projetos" className={styles.link}>
             Projetos
           </Link>
-          <Link to="/login" className={styles.startButton}>
+          <Link to="/auth" className={styles.startButton}>
             Começar agora
           </Link>
         </div>
