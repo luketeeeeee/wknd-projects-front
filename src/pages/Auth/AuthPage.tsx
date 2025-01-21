@@ -1,9 +1,9 @@
 import { CodeXml } from "lucide-react";
 import { useState } from "react";
 
+import Login from "../../components/Auth/Login";
+import Register from "../../components/Auth/Register";
 import styles from "./AuthPage.module.css";
-import Login from "./Login";
-import Register from "./Register";
 
 export default function AuthPage() {
   const [authModeSelector, setAuthModeSelector] = useState("login");
@@ -43,7 +43,7 @@ export default function AuthPage() {
             <span>Ou continue com</span>
           </div>
 
-          <div>google auth</div>
+          <div></div>
         </div>
       </div>
 
