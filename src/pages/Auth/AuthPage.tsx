@@ -4,6 +4,7 @@ import { useState } from "react";
 import Login from "../../components/Auth/Login";
 import Register from "../../components/Auth/Register";
 import styles from "./AuthPage.module.css";
+import { GoogleLoginButton } from "../../components/Auth";
 
 export default function AuthPage() {
   const [authModeSelector, setAuthModeSelector] = useState("login");
@@ -43,7 +44,12 @@ export default function AuthPage() {
             <span>Ou continue com</span>
           </div>
 
-          <div></div>
+          <div>
+            <GoogleLoginButton
+              onSuccess={() => console.log("ok")}
+              onFailure={() => console.log("not ok")}
+            />
+          </div>
         </div>
       </div>
 
