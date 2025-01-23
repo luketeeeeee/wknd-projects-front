@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+import { decodeJWTPayload } from "../../utils/decodeJWTPayload";
+
 type GoogleLoginButtonProps = {
   onSuccess: (credential: string) => void;
   onFailure: (error: string) => void;
@@ -9,6 +11,18 @@ export default function GoogleLoginButton({
   onSuccess,
   onFailure,
 }: GoogleLoginButtonProps) {
+  const handleCallbackResponse = (
+    response: google.accounts.id.CredentialResponse,
+  ) => {
+    if (response.credential) {
+      decodeJWTPayload(response.credential);
+
+      onSuccess(response.credential);
+    } else {
+      onFailure("Login Error");
+    }
+  };
+
   useEffect(() => {
     if (window.google?.accounts?.id) {
       window.google.accounts.id.initialize({
@@ -26,16 +40,6 @@ export default function GoogleLoginButton({
       );
     }
   }, [onFailure]);
-
-  const handleCallbackResponse = (
-    response: google.accounts.id.CredentialResponse,
-  ) => {
-    if (response.credential) {
-      onSuccess(response.credential);
-    } else {
-      onFailure("Login Error");
-    }
-  };
 
   return <div id="google-login-button"></div>;
 }

@@ -1,7 +1,9 @@
 import { CodeXml } from "lucide-react";
 import { useState } from "react";
 
-import { GoogleLoginButton, Login, Register } from "../../components/Auth";
+import { GoogleLoginButton } from "../../components/GoogleLoginButton";
+import { Login } from "../../components/Login";
+import { Register } from "../../components/Register";
 import styles from "./AuthPage.module.css";
 
 export default function AuthPage() {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { LoginForm } from "../../pages/Auth/authForms.types";
+import { LoginForm } from "../../types/auth.types";
 import styles from "./Login.module.css";
 
 export default function Login() {
