@@ -116,3 +116,8 @@
   font-size: 16px;
   color: rgba(0, 0, 0, 0.6);
 }
+
+.googleLoginButton {
+  display: flex;
+  justify-content: center;
+}
