@@ -1,6 +1,19 @@
+import { useState } from "react";
 import styles from "./Register.module.css";
 
 export default function Register() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    degree: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData();
+  };
+
   return (
     <div className={styles.registerContainer}>
       <div className={styles.field}>
