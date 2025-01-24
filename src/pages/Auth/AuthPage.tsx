@@ -5,6 +5,7 @@ import { GoogleLoginButton } from "../../components/GoogleLoginButton";
 import { Login } from "../../components/Login";
 import { Register } from "../../components/Register";
 import styles from "./AuthPage.module.css";
+import { Link } from "react-router";
 
 export default function AuthPage() {
   const [authModeSelector, setAuthModeSelector] = useState("login");
@@ -53,7 +54,19 @@ export default function AuthPage() {
         </div>
       </div>
 
-      <p>terms and conditions</p>
+      <p className={styles.termsAndPolicy}>
+        Ao se cadastrar, você concorda com nossos{" "}
+        <Link to="/termos-de-servico" className={styles.termsAndPolicyLink}>
+          Termos de Serviço
+        </Link>{" "}
+        e{" "}
+        <Link
+          to="/politica-de-privacidade"
+          className={styles.termsAndPolicyLink}
+        >
+          Política de Privacidade
+        </Link>
+      </p>
     </div>
   );
 }
