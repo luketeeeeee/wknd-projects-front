@@ -9,9 +9,12 @@ export default function Register() {
     password: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: InputEvent) => {
     const { name, value } = e.target;
-    setFormData();
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   return (
