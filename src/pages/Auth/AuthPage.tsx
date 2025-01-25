@@ -1,11 +1,11 @@
 import { CodeXml } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router";
 
 import { GoogleLoginButton } from "../../components/GoogleLoginButton";
 import { Login } from "../../components/Login";
 import { Register } from "../../components/Register";
 import styles from "./AuthPage.module.css";
-import { Link } from "react-router";
 
 export default function AuthPage() {
   const [authModeSelector, setAuthModeSelector] = useState("login");

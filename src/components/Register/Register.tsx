@@ -1,24 +1,20 @@
 import { useState } from "react";
+
+import { RegisterFormType } from "../../types/auth.types";
+import { handleTextInputChange } from "../../utils/handleTextInputChange";
 import styles from "./Register.module.css";
 
 export default function Register() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<RegisterFormType>({
     name: "",
     email: "",
     degree: "",
     password: "",
+    confirmPassword: "",
   });
 
-  const handleChange = (e: InputEvent) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
   return (
-    <div className={styles.registerContainer}>
+    <form className={styles.registerContainer}>
       <div className={styles.field}>
         <label htmlFor="name">Nome</label>
         <input
@@ -27,6 +23,8 @@ export default function Register() {
           id="name"
           name="name"
           placeholder="Memphis Depay"
+          value={formData.name}
+          onChange={(e) => handleTextInputChange(e, setFormData)}
         />
       </div>
 
@@ -38,6 +36,8 @@ export default function Register() {
           id="email"
           name="email"
           placeholder="seu@email.com"
+          value={formData.email}
+          onChange={(e) => handleTextInputChange(e, setFormData)}
         />
       </div>
 
@@ -49,6 +49,8 @@ export default function Register() {
           id="degree"
           name="degree"
           placeholder="Ciência da Computação"
+          value={formData.degree}
+          onChange={(e) => handleTextInputChange(e, setFormData)}
         />
       </div>
 
@@ -62,6 +64,8 @@ export default function Register() {
           id="password"
           name="password"
           placeholder="*********"
+          value={formData.password}
+          onChange={(e) => handleTextInputChange(e, setFormData)}
         />
       </div>
 
@@ -75,10 +79,17 @@ export default function Register() {
           id="confirmaPassword"
           name="confirmPassword"
           placeholder="*********"
+          value={formData.confirmPassword}
+          onChange={(e) => handleTextInputChange(e, setFormData)}
         />
       </div>
 
-      <button className={styles.registerButton}>Criar conta</button>
-    </div>
+      <button
+        className={styles.registerButton}
+        onClick={() => console.log(formData)}
+      >
+        Criar conta
+      </button>
+    </form>
   );
 }
