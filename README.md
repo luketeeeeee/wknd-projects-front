@@ -8,5 +8,8 @@
 ### todo
 
 [] basic authentication
+[] login with google
 [] fix "bem vindo" message font size (auth page)
 [] fix wknd projects logo font size (auth page)
+[] create service terms and privacy policy
+[] landing page anchors

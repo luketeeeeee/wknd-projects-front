@@ -1,0 +1,44 @@
+.registerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 700;
+}
+
+.input {
+  height: 35px;
+  padding: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.registerButton {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 0;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgba(20, 66, 250, 0.95);
+  font-size: var(--small-text);
+  font-weight: 600;
+  color: var(--background);
+  transition: 500ms;
+}
+
+.registerButton:hover {
+  background-color: rgb(20, 66, 250);
+  cursor: pointer;
+}

@@ -1,13 +1,13 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-import { LoginForm } from "./authForms.types";
+// import { LoginForm } from "../../types/auth.types";
 import styles from "./Login.module.css";
 
 export default function Login() {
-  const [loginForm, setLoginForm] = useState<LoginForm>({
-    email: "",
-    password: "",
-  });
+  // const [loginForm, setLoginForm] = useState<LoginForm>({
+  //   email: "",
+  //   password: "",
+  // });
 
   return (
     <div className={styles.loginContainer}>

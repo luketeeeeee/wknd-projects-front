@@ -1,9 +1,11 @@
 import { CodeXml } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router";
 
+import { GoogleLoginButton } from "../../components/GoogleLoginButton";
+import { Login } from "../../components/Login";
+import { Register } from "../../components/Register";
 import styles from "./AuthPage.module.css";
-import Login from "./Login";
-import Register from "./Register";
 
 export default function AuthPage() {
   const [authModeSelector, setAuthModeSelector] = useState("login");
@@ -43,11 +45,28 @@ export default function AuthPage() {
             <span>Ou continue com</span>
           </div>
 
-          <div>google auth</div>
+          <div className={styles.googleLoginButton}>
+            <GoogleLoginButton
+              onSuccess={() => console.log("ok")}
+              onFailure={() => console.log("not ok")}
+            />
+          </div>
         </div>
       </div>
 
-      <p>terms and conditions</p>
+      <p className={styles.termsAndPolicy}>
+        Ao se cadastrar, você concorda com nossos{" "}
+        <Link to="/termos-de-servico" className={styles.termsAndPolicyLink}>
+          Termos de Serviço
+        </Link>{" "}
+        e{" "}
+        <Link
+          to="/politica-de-privacidade"
+          className={styles.termsAndPolicyLink}
+        >
+          Política de Privacidade
+        </Link>
+      </p>
     </div>
   );
 }
